@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VansI • Auth</title>
+
+    <link rel="stylesheet"
+          href="css/auth.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Particle Background -->
+
+    <canvas id="particles"></canvas>
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <!-- Logo -->
+
+            <div class="logo">
+
+                <div class="logo-icon">
+
+                    <span class="logo-v">V</span>
+
+                    <span class="logo-i">I</span>
+
+                </div>
+
+                <h1>VansI</h1>
+
+            </div>
+
+            <h2 class="auth-title">
+                Welcome back, coder
+            </h2>
+
+            <p class="auth-subtitle">
+                Enter the matrix
+            </p>
+
+            <!-- Toggle Tabs -->
+
+            <div class="toggle-tabs">
+
+                <button id="login-tab"
+                        class="tab-btn active">
+
+                    Login
+                </button>
+
+                <button id="signup-tab"
+                        class="tab-btn">
+
+                    Sign Up
+                </button>
+
+            </div>
+
+            <!-- Login Form -->
+
+            <form id="login-form"
+                  class="auth-form active">
+
+                <div class="input-group">
+
+                    <label for="login-email">
+                        Email
+                    </label>
+
+                    <input type="email"
+                           id="login-email"
+                           placeholder="you@domain.com"
+                           required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="login-password">
+                        Password
+                    </label>
+
+                    <input type="password"
+                           id="login-password"
+                           placeholder="••••••••"
+                           required>
+
+                </div>
+
+                <div class="forgot-link">
+
+                    <a href="#"
+                       id="forgot-password">
+
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+                <button type="submit"
+                        id="login-btn"
+                        class="auth-button">
+
+                    <span class="btn-text">
+                        Enter the Grid
+                    </span>
+
+                    <span class="btn-loader"></span>
+
+                </button>
+
+            </form>
+
+            <!-- Signup Form -->
+
+            <form id="signup-form"
+                  class="auth-form">
+
+                <div class="input-group">
+
+                    <label for="signup-username">
+                        Username
+                    </label>
+
+                    <input type="text"
+                           id="signup-username"
+                           placeholder="cyber_ninja42"
+                           required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="signup-email">
+                        Email
+                    </label>
+
+                    <input type="email"
+                           id="signup-email"
+                           placeholder="you@domain.com"
+                           required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="signup-password">
+                        Password
+                    </label>
+
+                    <input type="password"
+                           id="signup-password"
+                           placeholder="••••••••"
+                           required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="signup-confirm">
+                        Confirm Password
+                    </label>
+
+                    <input type="password"
+                           id="signup-confirm"
+                           placeholder="••••••••"
+                           required>
+
+                </div>
+
+                <button type="submit"
+                        id="signup-btn"
+                        class="auth-button">
+
+                    <span class="btn-text">
+                        Join the Resistance
+                    </span>
+
+                    <span class="btn-loader"></span>
+
+                </button>
+
+                <div id="verification-notice"
+                     class="verification-notice hidden">
+
+                    Verification email sent.
+                    <br>
+                    Please check your inbox.
+
+                </div>
+
+            </form>
+
+            <!-- Switch Text -->
+
+            <div class="switch-text">
+
+                <span id="switch-text">
+                    Don't have an account?
+                </span>
+
+                <button id="switch-btn"
+                        class="switch-link">
+
+                    Sign up
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Toast -->
+
+    <div id="toast"
+         class="toast hidden"></div>
+
+    <!-- SUPABASE -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+    <script src="backend/supabase.js"></script>
+
+    <!-- AUTH -->
+
+    <script src="js/auth.js"></script>
+
+</body>
+</html>
